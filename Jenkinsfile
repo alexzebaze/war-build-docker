@@ -1,4 +1,4 @@
-node('wsl-agent') {
+nnode('wsl-agent') {
     def registryProjet = 'registry.gitlab.com/zebaze/tuto-jenkins/wartest'
     def IMAGE = "${registryProjet}:version-${env.BUILD_ID}"
 
@@ -7,7 +7,7 @@ node('wsl-agent') {
     }
 
     stage('Maven package') {
-        sh 'mvn package'
+        sh 'mvn clean package'
     }
 
     def img = stage('Build') {
