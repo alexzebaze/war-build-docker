@@ -3,7 +3,7 @@ node('wsl-agent') {
     def IMAGE = "${registryProjet}:version-${env.BUILD_ID}"
 
     stage('Clone') {
-        checkout SCM
+        checkout scm
     }
 
     stage('Maven package') {
