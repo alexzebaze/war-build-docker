@@ -7,7 +7,7 @@ nnode('wsl-agent') {
     }
 
     stage('Maven package') {
-        sh 'mvn clean package'
+        sh 'mvn package'
     }
 
     def img = stage('Build') {
