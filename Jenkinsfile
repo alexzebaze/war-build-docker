@@ -1,4 +1,4 @@
-node {
+node('wsl-agent') {
     def registryProjet = 'registry.gitlab.com/zebaze/tuto-jenkins/wartest'
     def IMAGE = "${registryProjet}:version-${env.BUILD_ID}"
 
