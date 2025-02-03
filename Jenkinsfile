@@ -3,7 +3,7 @@ node('wsl-agent') {
     def IMAGE = "${registryProjet}:version-${env.BUILD_ID}"
 
     stage('Clone') {
-        git 'https://github.com/zebaze/war-build-docker.git'
+        checkout SCM
     }
 
     stage('Maven package') {
